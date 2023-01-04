@@ -5,6 +5,6 @@ import { Yeelight } from 'yeelight-node'
  */
 const yeelight = new Yeelight({ ip: '', port: 55443 })
 
-let setRandomColor = () => yeelight.set_rgb([Math.round(Math.random() * 255),Math.round(Math.random() * 255),Math.round(Math.random() * 255)])
-
-setRandomColor()
+yeelight.set_power('on')
+yeelight.set_bright(100)
+yeelight.set_rgb([242, 189, 205])
